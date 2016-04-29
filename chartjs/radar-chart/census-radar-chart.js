@@ -2,9 +2,9 @@
 
 var ctx = document.getElementById("radar-chart-canvas").getContext("2d");
 
-// All data is scaled to [0, 3000]
+// All data is scaled to [0, 100]
 var data = {
-    labels: ["% White", "% Non-White", "% Home Owners", "% Renters", "Crime"],
+    labels: ["Population", "% White", "% Non-White", "% Home Owners", "% Renters", "Crime"],
     datasets: [
         {
             label: "Laurelhurst",
@@ -14,8 +14,8 @@ var data = {
             pointBorderColor: "#fff",
             pointHoverBackgroundColor: "#fff",
             pointHoverBorderColor: "rgba(179,181,198,1)",
-//            data: [88, 12, 88, 12, 250], // Percentages 0 - 100. Crime data is absolute quantity.
-            data: [2640, 360, 2640, 360, 250], // All quantities scaled to [0, 3000]
+//          data: [5028, 88, 12, 88, 12, 250], // Percentages 0 - 100. Population and Crime data is absolute quantity.
+            data: [30, 88, 12, 88, 12, 8], // All quantities scaled to [0, 100]
             lineTension: 100 // Does not seem to have any effect. Default is 0 for straight lines.
         },
         {
@@ -26,8 +26,8 @@ var data = {
             pointBorderColor: "#fff",
             pointHoverBackgroundColor: "#fff",
             pointHoverBorderColor: "rgba(255,99,132,1)",
-//            data: [50, 50, 57, 43, 2651] // Percentages 0 - 100. Crime data is absolute quantity.
-            data: [1500, 1500, 1710, 1290, 2651] // All quantities scaled to [0, 3000]
+//          data: [16774, 50, 50, 57, 43, 2651], // Percentages 0 - 100. Population and Crime data is absolute quantity.
+            data: [99, 50, 50, 57, 43, 88] // All quantities scaled to [0, 100]
         }
     ]
 };
